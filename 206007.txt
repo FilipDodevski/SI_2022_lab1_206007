@@ -1,0 +1,167 @@
+PRASHANJE 4:
+C:\Users\fic>git clone https://github.com/FilipDodevski/SI_2022_lab1_206007
+Cloning into 'SI_2022_lab1_206007'...
+Со командата "git clone" направив клонирање на remote репозиториумот во локалниот репозиториум
+
+PRASHANJE 5:
+C:\Users\fic\SI_2022_lab1_206007>git add shopping_list.txt
+C:\Users\fic\SI_2022_lab1_206007>git commit -m "Add 5 items to the shopping list"
+Со првата команда го додадов креираниот фајл на сцена, за да после со втората команда направам commit оставајќи соодветна порака
+
+PRASHANJE 6:
+C:\Users\fic\SI_2022_lab1_206007>git commit -a -m "Add quantities to the items."
+Со оваа команда го додаов фајлот на сцена и направив commit со соодветната порака (ја искористив скратената верзија од командата бидејќи фајлот веќе не е untracked)
+
+PRASHANJE 7:
+C:\Users\fic\SI_2022_lab1_206007>git branch branch1
+C:\Users\fic\SI_2022_lab1_206007>git branch branch2
+Со претходните команди креирав две гранки насловени како branch1 i branch2
+
+PRASHANJE 8:
+C:\Users\fic\SI_2022_lab1_206007>git log
+commit d43f024f2380e717361e1a77b864fac3c8039542 (HEAD -> master, branch2, branch1)
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:05:48 2022 +0200
+
+    Add quantities to the items.
+
+commit 3d4243c328f31b42985f176d87f3c60c80e134a8
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:05:14 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 3ee2a25f031a4fe9b0a5042e02bcfbec86b0310e (origin/master, origin/HEAD)
+Author: FILIP <102929539+FilipDodevski@users.noreply.github.com>
+Date:   Mon Apr 4 05:02:33 2022 +0200
+
+    Update README.md
+
+commit db51d99e007eb63a3556cce4b7475ef5732c1a7f
+Author: FILIP <102929539+FilipDodevski@users.noreply.github.com>
+Date:   Mon Apr 4 05:02:13 2022 +0200
+
+    Initial commit
+
+
+PRASHANJE 9:
+C:\Users\fic\SI_2022_lab1_206007>git push -u origin master
+C:\Users\fic\SI_2022_lab1_206007>git push origin branch1
+C:\Users\fic\SI_2022_lab1_206007>git push origin branch2
+Со претходните команди локалните активности ги прикачив на remote репозиториоумот
+
+PRASHANJE 10:
+C:\Users\fic\SI_2022_lab1_206007>git checkout branch1
+Сo checkout командата се префрлив на соодветната гранка
+
+PRASHANJE 11:
+C:\Users\fic\SI_2022_lab1_206007>git commit -a -m "Change quantity of item #5"
+Соодветната промена - направаена
+
+PRASHANJE 12:
+C:\Users\fic\SI_2022_lab1_206007>git checkout master
+
+PRASHANJE 13:
+C:\Users\fic\SI_2022_lab1_206007>git commit -a -m "Change quantity of item #2"
+Соодветната промена - направаена
+
+PRASHANJE 14:
+C:\Users\fic\SI_2022_lab1_206007>git push -u origin master
+C:\Users\fic\SI_2022_lab1_206007>git push origin branch1
+C:\Users\fic\SI_2022_lab1_206007>git push origin branch2
+Со претходните команди локалните активности ги прикачив на remote репозиториоумот
+
+PRASHANJE 15:
+C:\Users\fic\SI_2022_lab1_206007>git checkout branch2
+
+PRASHANJE 16:
+C:\Users\fic\SI_2022_lab1_206007>git commit -a -m "Modify item #4"
+Соодветната промена - направаена
+
+PRASHANJE 17:
+
+C:\Users\fic\SI_2022_lab1_206007>git log
+commit d43f024f2380e717361e1a77b864fac3c8039542 (HEAD -> master, branch2, branch1)
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:08:48 2022 +0200
+
+     Modify item #4
+
+commit d43f024f2380e717361e1a77b864fac3c8039542 (origin/branch2)
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:06:50 2022 +0200
+
+    Add quantities to the items.
+
+commit 3d4243c328f31b42985f176d87f3c60c80e134a8
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:05:14 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 3ee2a25f031a4fe9b0a5042e02bcfbec86b0310e (origin/master, origin/HEAD)
+Author: FILIP <102929539+FilipDodevski@users.noreply.github.com>
+Date:   Mon Apr 4 05:02:33 2022 +0200
+
+    Update README.md
+
+commit db51d99e007eb63a3556cce4b7475ef5732c1a7f
+Author: FILIP <102929539+FilipDodevski@users.noreply.github.com>
+Date:   Mon Apr 4 05:02:13 2022 +0200
+
+    Initial commit
+
+
+
+PRASHANJE 18:
+C:\Users\fic\SI_2022_lab1_206007>git reset --soft HEAD~
+C:\Users\fic\SI_2022_lab1_206007>git commit -a -m "Modify item #4 and add item #6"
+Со командата reset се вратив еден чекор назад, додадов артикал 6 и направив commit
+
+PRASHANJE 19:
+C:\Users\fic\SI_2022_lab1_206007>git log
+commit f1b7078f4adc60219ae0802c085664963681578c (HEAD -> branch2)
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:11:51 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit d43f024f2380e717361e1a77b864fac3c8039542 (origin/branch2)
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:05:48 2022 +0200
+
+    Add quantities to the items.
+
+commit 3d4243c328f31b42985f176d87f3c60c80e134a8
+Author: unknown <filip.dodevski17@gmail.com>
+Date:   Mon Apr 4 05:05:14 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 3ee2a25f031a4fe9b0a5042e02bcfbec86b0310e
+Author: FILIP <102929539+FilipDodevski@users.noreply.github.com>
+Date:   Mon Apr 4 05:02:33 2022 +0200
+
+    Update README.md
+
+commit db51d99e007eb63a3556cce4b7475ef5732c1a7f
+Author: FILIP <102929539+FilipDodevski@users.noreply.github.com>
+Date:   Mon Apr 4 05:02:13 2022 +0200
+
+    Initial commit
+
+PRASHANJE 20:
+C:\Users\fic\SI_2022_lab1_206007>git checkout master
+C:\Users\fic\SI_2022_lab1_206007>git merge branch1
+Бидејќи не се јавија конфликти, а имаше претходни комити на master спојувањето се направи по рекурзивна стратегија.
+
+PRASHANJE 21:
+C:\Users\fic\SI_2022_lab1_206007>git merge branch2
+Се случи кофликт, ги применив последните промени во shopping_list.txt и зачував.
+На крајот направив commit на промените, а спојувањето резултираше со нов merge commit како што беше побарано (рекурзивна стратегија).
+
+
+
+
+
+
